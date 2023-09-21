@@ -190,3 +190,13 @@ class TestAccountService(TestCase):
         )
         self.assertEqual(resp.status_code, status.HTTP_404_NOT_FOUND)
 
+
+    def test_read_all_accounts(self):
+        """It should READ ALL accounts """
+        
+        resp = self.client.get(
+            BASE_URL, content_type="application/json"
+        )
+        
+        self.assertEqual(resp.status_code, status.HTTP_200_OK)
+        
