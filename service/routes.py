@@ -80,7 +80,9 @@ def read_accounts(account_id):
     if not account:
         abort(status.HTTP_404_NOT_FOUND, f"Account with id [{account_id}] could not be found.")
         
-    return account.serialize(), status.HTTP_200_OK
+    return make_response(
+        account.serialize(), status.HTTP_200_OK
+        )
 
 
 
@@ -101,14 +103,28 @@ def update_accounts(account_id):
         abort(status.HTTP_404_NOT_FOUND, f"Account with id [{account_id}] could not be found.")
     account.deserialize(request.get_json())
     account.update()
-    return account.serialize(), status.HTTP_200_OK
+    return make_response(
+        account.serialize(), status.HTTP_200_OK
+    )
 
 
 ######################################################################
 # DELETE AN ACCOUNT
 ######################################################################
 
-# ... place you code here to DELETE an account ...
+@app.route("/accounts/<int:account_id>", methods=["DELETE"])
+def delete_accounts(account_id):
+    """
+    Deletes an Account
+    This endpoint will delete an Account based the id and data json
+    """
+    app.logger.info("Request to delete an Account")
+    check_content_type("application/json")
+    account = Account.find(account_id)
+    if not account:
+        abort(status.HTTP_404_NOT_FOUND, f"Account with id [{account_id}] could not be found.")
+    account.delete()
+    return make_response("", status.HTTP_200_OK)
 
 
 ######################################################################

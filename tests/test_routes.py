@@ -157,8 +157,36 @@ class TestAccountService(TestCase):
         self.assertEqual(data["name"], account.name)
         self.assertNotEqual(data["name"], name)
 
-#    def test_read_an_account_failed(self):
-#        """It should READ none account """
-#        account_id = 0
-#        resp = self.client.get(f"{BASE_URL}/{account_id}", content_type="application/json")
-#        self.assertEqual(resp.status_code, status.HTTP_404_NOT_FOUND)
+    def test_update_an_account_failed(self):
+        """It should UPDATE none account """
+        account_id = 0
+        account = self._create_accounts(1)[0]
+        resp = self.client.put(f"{BASE_URL}/{account_id}", json=account.serialize())
+        self.assertEqual(resp.status_code, status.HTTP_404_NOT_FOUND)
+
+    def test_delete_an_account(self):
+        """It should DELETE an account """
+        account = AccountFactory()
+        response = self.client.post(
+            BASE_URL,
+            json=account.serialize(),
+            content_type="application/json"
+        )
+        new_account = response.get_json()
+        account_id = new_account["id"]
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
+        resp = self.client.delete (
+            f"{BASE_URL}/{account_id}",  content_type="application/json"
+        )
+        self.assertEqual(resp.status_code, status.HTTP_200_OK)
+
+    def test_delete_an_account_failed(self):
+        """It should DELETE none account """
+        account_id = 0
+        
+        resp = self.client.delete (
+            f"{BASE_URL}/{account_id}",  content_type="application/json"
+        )
+        self.assertEqual(resp.status_code, status.HTTP_404_NOT_FOUND)
+
