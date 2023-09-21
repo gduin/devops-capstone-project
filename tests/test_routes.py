@@ -140,4 +140,4 @@ class TestAccountService(TestCase):
         """It should READ none account """
         account_id = 0
         resp = self.client.get(f"{BASE_URL}/{account_id}", content_type="application/json")
-        self.assertEqual(resp.status_code, 404)
+        self.assertEqual(resp.status_code, status.HTTP_404_NOT_FOUND)
