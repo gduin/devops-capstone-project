@@ -179,7 +179,7 @@ class TestAccountService(TestCase):
         resp = self.client.delete (
             f"{BASE_URL}/{account_id}",  content_type="application/json"
         )
-        self.assertEqual(resp.status_code, status.HTTP_200_OK)
+        self.assertEqual(resp.status_code, status.HTTP_204_NO_CONTENT)
 
     def test_delete_an_account_failed(self):
         """It should DELETE none account """
