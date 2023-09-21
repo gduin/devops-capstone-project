@@ -137,7 +137,7 @@ def delete_accounts(account_id):
     if not account:
         abort(status.HTTP_404_NOT_FOUND, f"Account with id [{account_id}] could not be found.")
     account.delete()
-    return make_response("", status.HTTP_200_OK)
+    return make_response("", status.HTTP_204_NO_CONTENT)
 
 
 ######################################################################
