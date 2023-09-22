@@ -4,7 +4,7 @@
 [![Python 3.9](https://img.shields.io/badge/Python-3.9-green.svg)](https://shields.io/)
 
 
-![Build Status](https://github.com/giovannyduin/devops-capstone-project/actions/workflows/<WORKFLOW_FILE>/badge.svg)
+![Build Status](https://github.com/giovannyduin/devops-capstone-project/actions/workflows/ci-build.yaml/badge.svg)
 
 
 
