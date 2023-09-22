@@ -72,7 +72,6 @@ def read_all_accounts():
     check_content_type("application/json")
     accounts = Account.all()
     account_lst = [acc.serialize() for acc in accounts]
-    
     return make_response(
         jsonify(account_lst), status.HTTP_200_OK
         )
@@ -94,11 +93,9 @@ def read_accounts(account_id):
     account = Account.find(account_id)
     if not account:
         abort(status.HTTP_404_NOT_FOUND, f"Account with id [{account_id}] could not be found.")
-        
     return make_response(
         account.serialize(), status.HTTP_200_OK
         )
-
 
 
 ######################################################################
