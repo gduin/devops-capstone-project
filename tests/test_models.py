@@ -85,7 +85,7 @@ class TestAccount(unittest.TestCase):
         account = AccountFactory()
         account.create()
 
-        # Read it back 
+        # Read it back
         found_account = Account.find(account.id)
         self.assertEqual(found_account.id, account.id)
         self.assertEqual(found_account.name, account.name)
