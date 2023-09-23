@@ -16,7 +16,6 @@ spec:
     - name: branch
       default: main
     - name: build-image
-      default: accounts
   tasks:
     - name: init
       workspaces:
@@ -69,6 +68,7 @@ spec:
       runAfter:
         - clone
 
+    # Build task using buildah
     - name: build
       workspaces:
         - name: source
@@ -79,6 +79,9 @@ spec:
       params:
       - name: IMAGE
         value: "$(params.build-image)"
+      - name: SCRIPT
+        value: |
+          echo "Build image...$(params.build-image)"
       runAfter:
         - tests
         - lint
