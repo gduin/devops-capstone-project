@@ -1,0 +1,551 @@
+[init : remove] Removing all files from /workspace/source ...
+
+[clone : clone] + '[' false '=' true ]
+[clone : clone] + '[' false '=' true ]
+[clone : clone] + '[' false '=' true ]
+[clone : clone] + CHECKOUT_DIR=/workspace/output/
+[clone : clone] + '[' true '=' true ]
+[clone : clone] + cleandir
+[clone : clone] + '[' -d /workspace/output/ ]
+[clone : clone] + rm -rf '/workspace/output//*'
+[clone : clone] + rm -rf '/workspace/output//.[!.]*'
+[clone : clone] + rm -rf '/workspace/output//..?*'
+[clone : clone] + test -z 
+[clone : clone] + test -z 
+[clone : clone] + test -z 
+[clone : clone] + git config --global --add safe.directory /workspace/output
+[clone : clone] + /ko-app/git-init '-url=https://github.com/giovannyduin/devops-capstone-project.git' '-revision=cd-pipeline' '-refspec=' '-path=/workspace/output/' '-sslVerify=true' '-submodules=true' '-depth=1' '-sparseCheckoutDirectories='
+[clone : clone] {"level":"info","ts":1695447318.6915455,"caller":"git/git.go:176","msg":"Successfully cloned https://github.com/giovannyduin/devops-capstone-project.git @ 6f042ccf3839f7bc39ba4493a89dd7a0d8e2532c (grafted, HEAD, origin/cd-pipeline) in path /workspace/output/"}
+[clone : clone] {"level":"info","ts":1695447318.8215327,"caller":"git/git.go:215","msg":"Successfully initialized and updated submodules in path /workspace/output/"}
+[clone : clone] + cd /workspace/output/
+[clone : clone] + git rev-parse HEAD
+[clone : clone] + RESULT_SHA=6f042ccf3839f7bc39ba4493a89dd7a0d8e2532c
+[clone : clone] + EXIT_CODE=0
+[clone : clone] + '[' 0 '!=' 0 ]
+[clone : clone] + git log -1 '--pretty=%ct'
+[clone : clone] + RESULT_COMMITTER_DATE=1695446861
+[clone : clone] + printf '%s' 1695446861
+[clone : clone] + printf '%s' 6f042ccf3839f7bc39ba4493a89dd7a0d8e2532c
+[clone : clone] + printf '%s' https://github.com/giovannyduin/devops-capstone-project.git
+
+[lint : flake8] Collecting Werkzeug==2.1.2
+[lint : flake8]   Downloading Werkzeug-2.1.2-py3-none-any.whl (224 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.9/224.9 kB 8.5 MB/s eta 0:00:00
+[lint : flake8] Collecting SQLAlchemy==1.4.46
+[lint : flake8]   Downloading SQLAlchemy-1.4.46-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 75.4 MB/s eta 0:00:00
+[lint : flake8] Collecting Flask==2.1.2
+[lint : flake8]   Downloading Flask-2.1.2-py3-none-any.whl (95 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.2/95.2 kB 39.0 MB/s eta 0:00:00
+[lint : flake8] Collecting Flask-SQLAlchemy==2.5.1
+[lint : flake8]   Downloading Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl (17 kB)
+[lint : flake8] Collecting psycopg2-binary==2.9.3
+[lint : flake8]   Downloading psycopg2_binary-2.9.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 83.4 MB/s eta 0:00:00
+[lint : flake8] Collecting python-dotenv==0.20.0
+[lint : flake8]   Downloading python_dotenv-0.20.0-py3-none-any.whl (17 kB)
+[lint : flake8] Collecting Flask-Talisman
+[lint : flake8]   Downloading flask_talisman-1.1.0-py2.py3-none-any.whl (18 kB)
+[lint : flake8] Collecting Flask-Cors
+[lint : flake8]   Downloading Flask_Cors-4.0.0-py2.py3-none-any.whl (14 kB)
+[lint : flake8] Collecting gunicorn==20.1.0
+[lint : flake8]   Downloading gunicorn-20.1.0-py3-none-any.whl (79 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 33.2 MB/s eta 0:00:00
+[lint : flake8] Collecting honcho==1.1.0
+[lint : flake8]   Downloading honcho-1.1.0-py2.py3-none-any.whl (21 kB)
+[lint : flake8] Collecting pylint==2.14.0
+[lint : flake8]   Downloading pylint-2.14.0-py3-none-any.whl (485 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 485.0/485.0 kB 8.6 MB/s eta 0:00:00
+[lint : flake8] Collecting flake8==4.0.1
+[lint : flake8]   Downloading flake8-4.0.1-py2.py3-none-any.whl (64 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.1/64.1 kB 27.4 MB/s eta 0:00:00
+[lint : flake8] Collecting black==22.3.0
+[lint : flake8]   Downloading black-22.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.5 MB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 100.7 MB/s eta 0:00:00
+[lint : flake8] Collecting nose==1.3.7
+[lint : flake8]   Downloading nose-1.3.7-py3-none-any.whl (154 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 154.7/154.7 kB 48.0 MB/s eta 0:00:00
+[lint : flake8] Collecting pinocchio==0.4.3
+[lint : flake8]   Downloading pinocchio-0.4.3-py3-none-any.whl (12 kB)
+[lint : flake8] Collecting factory-boy==2.12.0
+[lint : flake8]   Downloading factory_boy-2.12.0-py2.py3-none-any.whl (36 kB)
+[lint : flake8] Collecting coverage==6.3.2
+[lint : flake8]   Downloading coverage-6.3.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (210 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 210.7/210.7 kB 62.0 MB/s eta 0:00:00
+[lint : flake8] Collecting httpie==3.2.1
+[lint : flake8]   Downloading httpie-3.2.1-py3-none-any.whl (124 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.0/125.0 kB 52.4 MB/s eta 0:00:00
+[lint : flake8] Collecting greenlet!=0.4.17
+[lint : flake8]   Downloading greenlet-2.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (610 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 610.9/610.9 kB 11.3 MB/s eta 0:00:00
+[lint : flake8] Collecting click>=8.0
+[lint : flake8]   Downloading click-8.1.7-py3-none-any.whl (97 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.9/97.9 kB 38.6 MB/s eta 0:00:00
+[lint : flake8] Collecting itsdangerous>=2.0
+[lint : flake8]   Downloading itsdangerous-2.1.2-py3-none-any.whl (15 kB)
+[lint : flake8] Collecting Jinja2>=3.0
+[lint : flake8]   Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.1/133.1 kB 53.5 MB/s eta 0:00:00
+[lint : flake8] Collecting importlib-metadata>=3.6.0
+[lint : flake8]   Downloading importlib_metadata-6.8.0-py3-none-any.whl (22 kB)
+[lint : flake8] Requirement already satisfied: setuptools>=3.0 in /usr/local/lib/python3.9/site-packages (from gunicorn==20.1.0->-r requirements.txt (line 14)) (58.1.0)
+[lint : flake8] Collecting tomlkit>=0.10.1
+[lint : flake8]   Downloading tomlkit-0.12.1-py3-none-any.whl (37 kB)
+[lint : flake8] Collecting mccabe<0.8,>=0.6
+[lint : flake8]   Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+[lint : flake8] Collecting astroid<=2.12.0-dev0,>=2.11.5
+[lint : flake8]   Downloading astroid-2.11.7-py3-none-any.whl (251 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 251.2/251.2 kB 64.4 MB/s eta 0:00:00
+[lint : flake8] Collecting platformdirs>=2.2.0
+[lint : flake8]   Downloading platformdirs-3.10.0-py3-none-any.whl (17 kB)
+[lint : flake8] Collecting dill>=0.2
+[lint : flake8]   Downloading dill-0.3.7-py3-none-any.whl (115 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.3/115.3 kB 43.6 MB/s eta 0:00:00
+[lint : flake8] Collecting typing-extensions>=3.10.0
+[lint : flake8]   Downloading typing_extensions-4.8.0-py3-none-any.whl (31 kB)
+[lint : flake8] Collecting tomli>=1.1.0
+[lint : flake8]   Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+[lint : flake8] Collecting isort<6,>=4.2.5
+[lint : flake8]   Downloading isort-5.12.0-py3-none-any.whl (91 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 32.7 MB/s eta 0:00:00
+[lint : flake8] Collecting pyflakes<2.5.0,>=2.4.0
+[lint : flake8]   Downloading pyflakes-2.4.0-py2.py3-none-any.whl (69 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.7/69.7 kB 29.5 MB/s eta 0:00:00
+[lint : flake8] Collecting pycodestyle<2.9.0,>=2.8.0
+[lint : flake8]   Downloading pycodestyle-2.8.0-py2.py3-none-any.whl (42 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.1/42.1 kB 8.9 MB/s eta 0:00:00
+[lint : flake8] Collecting mccabe<0.8,>=0.6
+[lint : flake8]   Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+[lint : flake8] Collecting pathspec>=0.9.0
+[lint : flake8]   Downloading pathspec-0.11.2-py3-none-any.whl (29 kB)
+[lint : flake8] Collecting mypy-extensions>=0.4.3
+[lint : flake8]   Downloading mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+[lint : flake8] Collecting colorama
+[lint : flake8]   Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+[lint : flake8] Collecting Faker>=0.7.0
+[lint : flake8]   Downloading Faker-19.6.2-py3-none-any.whl (1.7 MB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 102.4 MB/s eta 0:00:00
+[lint : flake8] Collecting requests-toolbelt>=0.9.1
+[lint : flake8]   Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.5/54.5 kB 19.8 MB/s eta 0:00:00
+[lint : flake8] Collecting requests[socks]>=2.22.0
+[lint : flake8]   Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 kB 16.4 MB/s eta 0:00:00
+[lint : flake8] Collecting Pygments>=2.5.2
+[lint : flake8]   Downloading Pygments-2.16.1-py3-none-any.whl (1.2 MB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 20.2 MB/s eta 0:00:00
+[lint : flake8] Collecting rich>=9.10.0
+[lint : flake8]   Downloading rich-13.5.3-py3-none-any.whl (239 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 239.8/239.8 kB 60.6 MB/s eta 0:00:00
+[lint : flake8] Collecting defusedxml>=0.6.0
+[lint : flake8]   Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+[lint : flake8] Collecting multidict>=4.7.0
+[lint : flake8]   Downloading multidict-6.0.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (114 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.2/114.2 kB 37.3 MB/s eta 0:00:00
+[lint : flake8] Collecting charset-normalizer>=2.0.0
+[lint : flake8]   Downloading charset_normalizer-3.2.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (202 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 202.1/202.1 kB 62.3 MB/s eta 0:00:00
+[lint : flake8] Requirement already satisfied: pip in /usr/local/lib/python3.9/site-packages (from httpie==3.2.1->-r requirements.txt (line 31)) (23.0.1)
+[lint : flake8] Collecting wrapt<2,>=1.11
+[lint : flake8]   Downloading wrapt-1.15.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (78 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.3/78.3 kB 34.2 MB/s eta 0:00:00
+[lint : flake8] Collecting lazy-object-proxy>=1.4.0
+[lint : flake8]   Downloading lazy_object_proxy-1.9.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (62 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 23.8 MB/s eta 0:00:00
+[lint : flake8] Collecting python-dateutil>=2.4
+[lint : flake8]   Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 kB 60.7 MB/s eta 0:00:00
+[lint : flake8] Collecting zipp>=0.5
+[lint : flake8]   Downloading zipp-3.17.0-py3-none-any.whl (7.4 kB)
+[lint : flake8] Collecting MarkupSafe>=2.0
+[lint : flake8]   Downloading MarkupSafe-2.1.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+[lint : flake8] Collecting urllib3<3,>=1.21.1
+[lint : flake8]   Downloading urllib3-2.0.5-py3-none-any.whl (123 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123.8/123.8 kB 43.8 MB/s eta 0:00:00
+[lint : flake8] Collecting idna<4,>=2.5
+[lint : flake8]   Downloading idna-3.4-py3-none-any.whl (61 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.5/61.5 kB 23.9 MB/s eta 0:00:00
+[lint : flake8] Collecting certifi>=2017.4.17
+[lint : flake8]   Downloading certifi-2023.7.22-py3-none-any.whl (158 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 158.3/158.3 kB 42.0 MB/s eta 0:00:00
+[lint : flake8] Collecting PySocks!=1.5.7,>=1.5.6
+[lint : flake8]   Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+[lint : flake8] Collecting markdown-it-py>=2.2.0
+[lint : flake8]   Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 38.2 MB/s eta 0:00:00
+[lint : flake8] Collecting mdurl~=0.1
+[lint : flake8]   Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+[lint : flake8] Collecting six>=1.5
+[lint : flake8]   Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+[lint : flake8] Installing collected packages: nose, mccabe, honcho, Flask-Talisman, zipp, wrapt, Werkzeug, urllib3, typing-extensions, tomlkit, tomli, six, python-dotenv, PySocks, Pygments, pyflakes, pycodestyle, psycopg2-binary, platformdirs, pathspec, mypy-extensions, multidict, mdurl, MarkupSafe, lazy-object-proxy, itsdangerous, isort, idna, gunicorn, greenlet, dill, defusedxml, coverage, colorama, click, charset-normalizer, certifi, SQLAlchemy, requests, python-dateutil, pinocchio, markdown-it-py, Jinja2, importlib-metadata, flake8, black, astroid, rich, requests-toolbelt, pylint, Flask, Faker, httpie, Flask-SQLAlchemy, Flask-Cors, factory-boy
+[lint : flake8] Successfully installed Faker-19.6.2 Flask-2.1.2 Flask-Cors-4.0.0 Flask-SQLAlchemy-2.5.1 Flask-Talisman-1.1.0 Jinja2-3.1.2 MarkupSafe-2.1.3 PySocks-1.7.1 Pygments-2.16.1 SQLAlchemy-1.4.46 Werkzeug-2.1.2 astroid-2.11.7 black-22.3.0 certifi-2023.7.22 charset-normalizer-3.2.0 click-8.1.7 colorama-0.4.6 coverage-6.3.2 defusedxml-0.7.1 dill-0.3.7 factory-boy-2.12.0 flake8-4.0.1 greenlet-2.0.2 gunicorn-20.1.0 honcho-1.1.0 httpie-3.2.1 idna-3.4 importlib-metadata-6.8.0 isort-5.12.0 itsdangerous-2.1.2 lazy-object-proxy-1.9.0 markdown-it-py-3.0.0 mccabe-0.6.1 mdurl-0.1.2 multidict-6.0.4 mypy-extensions-1.0.0 nose-1.3.7 pathspec-0.11.2 pinocchio-0.4.3 platformdirs-3.10.0 psycopg2-binary-2.9.3 pycodestyle-2.8.0 pyflakes-2.4.0 pylint-2.14.0 python-dateutil-2.8.2 python-dotenv-0.20.0 requests-2.31.0 requests-toolbelt-1.0.0 rich-13.5.3 six-1.16.0 tomli-2.0.1 tomlkit-0.12.1 typing-extensions-4.8.0 urllib3-2.0.5 wrapt-1.15.0 zipp-3.17.0
+[lint : flake8] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[lint : flake8] 
+[lint : flake8] [notice] A new release of pip is available: 23.0.1 -> 23.2.1
+[lint : flake8] [notice] To update, run: pip install --upgrade pip
+[lint : flake8] 0
+
+[tests : nosetests] ***** Installing dependencies *****
+[tests : nosetests] Requirement already satisfied: pip in /usr/local/lib/python3.9/site-packages (23.0.1)
+[tests : nosetests] Collecting pip
+[tests : nosetests]   Downloading pip-23.2.1-py3-none-any.whl (2.1 MB)
+[tests : nosetests]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 25.8 MB/s eta 0:00:00
+[tests : nosetests] Requirement already satisfied: wheel in /usr/local/lib/python3.9/site-packages (0.41.2)
+[tests : nosetests] Installing collected packages: pip
+[tests : nosetests]   Attempting uninstall: pip
+[tests : nosetests]     Found existing installation: pip 23.0.1
+[tests : nosetests]     Uninstalling pip-23.0.1:
+[tests : nosetests]       Successfully uninstalled pip-23.0.1
+[tests : nosetests] Successfully installed pip-23.2.1
+[tests : nosetests] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[tests : nosetests] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[tests : nosetests] ***** Running nosetests with: -v --with-spec --spec-color
+[tests : nosetests] nose.config: INFO: Ignoring files matching ['^\\.', '^_', '^setup\\.py$']
+[tests : nosetests] nose.plugins.cover: INFO: Coverage report will include only packages: ['service']
+[tests : nosetests] 
+[tests : nosetests] Test Flask CLI Commands
+[tests : nosetests] [1;32m- It should call the db-create command[1;0m
+[tests : nosetests] 
+[tests : nosetests] Test Cases for Account Model
+[tests : nosetests] [1;32m- It should Create an account and add it to the database[1;0m
+[tests : nosetests] [1;32m- It should Create an Account and assert that it exists[1;0m
+[tests : nosetests] [1;32m- It should Delete an account from the database[1;0m
+[tests : nosetests] [1;32m- It should Deserialize an account[1;0m
+[tests : nosetests] [1;32m- It should not Deserialize an account with a KeyError[1;0m
+[tests : nosetests] [1;32m- It should not Deserialize an account with a TypeError[1;0m
+[tests : nosetests] [1;32m- It should Find an Account by name[1;0m
+[tests : nosetests] [1;32m- It should List all Accounts in the database[1;0m
+[tests : nosetests] [1;32m- It should Read an account[1;0m
+[tests : nosetests] [1;32m- It should Serialize an account[1;0m
+[tests : nosetests] [1;32m- It should Update an account[1;0m
+[tests : nosetests] 
+[tests : nosetests] Account Service Tests
+[tests : nosetests] [1;32m- It should not Create an Account when sending the wrong data[1;0m
+[tests : nosetests] [1;32m- It should return a CORS header[1;0m
+[tests : nosetests] [1;32m- It should Create a new Account[1;0m
+[tests : nosetests] [1;32m- It should DELETE an account[1;0m
+[tests : nosetests] [1;32m- It should DELETE none account[1;0m
+[tests : nosetests] [1;32m- It should be healthy[1;0m
+[tests : nosetests] [1;32m- It should get 200_OK from the Home Page[1;0m
+[tests : nosetests] [1;32m- It should not allow an illegal method[1;0m
+[tests : nosetests] [1;32m- It should READ ALL accounts[1;0m
+[tests : nosetests] [1;32m- It should READ an account[1;0m
+[tests : nosetests] [1;32m- It should READ none account[1;0m
+[tests : nosetests] [1;32m- It should return security headers[1;0m
+[tests : nosetests] [1;32m- It should not Create an Account when sending the wrong media type[1;0m
+[tests : nosetests] [1;32m- It should UPDATE an account[1;0m
+[tests : nosetests] [1;32m- It should UPDATE none account[1;0m
+[tests : nosetests] 
+[tests : nosetests] Name                               Stmts   Miss  Cover   Missing
+[tests : nosetests] ----------------------------------------------------------------
+[tests : nosetests] service/__init__.py                   22      3    86%   38-41
+[tests : nosetests] service/common/__init__.py             0      0   100%
+[tests : nosetests] service/common/cli_commands.py         7      0   100%
+[tests : nosetests] service/common/error_handlers.py      32      3    91%   82-84
+[tests : nosetests] service/common/log_handlers.py        10      1    90%   22
+[tests : nosetests] service/common/status.py              46      0   100%
+[tests : nosetests] service/config.py                     11      5    55%   12-16
+[tests : nosetests] service/models.py                     71      2    97%   32, 137
+[tests : nosetests] service/routes.py                     60      0   100%
+[tests : nosetests] ----------------------------------------------------------------
+[tests : nosetests] TOTAL                                259     14    95%
+[tests : nosetests] ----------------------------------------------------------------------
+[tests : nosetests] Ran 27 tests in 2.727s
+[tests : nosetests] 
+[tests : nosetests] OK
+[tests : nosetests] 
+
+[build : build-and-push] STEP 1/10: FROM python:3.9-slim
+[build : build-and-push] Resolved "python" as an alias (/etc/containers/registries.conf.d/000-shortnames.conf)
+[build : build-and-push] Trying to pull docker.io/library/python:3.9-slim...
+[build : build-and-push] Getting image source signatures
+[build : build-and-push] Copying blob sha256:2fd2c896255c7556724e89e73c1ec921f1ba2b9f160c12538fbeac3b31503c78
+[build : build-and-push] Copying blob sha256:bf3336e84c8e00632cdea35b18fec9a5691711bdc8ac885e3ef54a3d5ff500ba
+[build : build-and-push] Copying blob sha256:a803e7c4b030119420574a882a52b6431e160fceb7620f61b525d49bc2d58886
+[build : build-and-push] Copying blob sha256:3614ca5053cfa002fa1e030c077def580221680f6278149d5d1b410af091431b
+[build : build-and-push] Copying blob sha256:7f93433c11f3772ce686752ccd8e52fbb24c447eaeb22fcdbac00fdb5c3c6058
+[build : build-and-push] Copying config sha256:cdecdc3a84699782600e00fde2c3e5067abdb3e4e1d560557fdc227b0c2b90b5
+[build : build-and-push] Writing manifest to image destination
+[build : build-and-push] Storing signatures
+[build : build-and-push] STEP 2/10: RUN pip install --upgrade pip
+[build : build-and-push] Requirement already satisfied: pip in /usr/local/lib/python3.9/site-packages (23.0.1)
+[build : build-and-push] Collecting pip
+[build : build-and-push]   Downloading pip-23.2.1-py3-none-any.whl (2.1 MB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 21.8 MB/s eta 0:00:00
+[build : build-and-push] Installing collected packages: pip
+[build : build-and-push]   Attempting uninstall: pip
+[build : build-and-push]     Found existing installation: pip 23.0.1
+[build : build-and-push]     Uninstalling pip-23.0.1:
+[build : build-and-push]       Successfully uninstalled pip-23.0.1
+[build : build-and-push] Successfully installed pip-23.2.1
+[build : build-and-push] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[build : build-and-push] STEP 3/10: WORKDIR /app
+[build : build-and-push] STEP 4/10: COPY requirements.txt .
+[build : build-and-push] STEP 5/10: RUN pip install --no-cache-dir -r requirements.txt
+[build : build-and-push] Collecting Werkzeug==2.1.2 (from -r requirements.txt (line 2))
+[build : build-and-push]   Downloading Werkzeug-2.1.2-py3-none-any.whl (224 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.9/224.9 kB 196.4 MB/s eta 0:00:00
+[build : build-and-push] Collecting SQLAlchemy==1.4.46 (from -r requirements.txt (line 3))
+[build : build-and-push]   Downloading SQLAlchemy-1.4.46-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 110.4 MB/s eta 0:00:00
+[build : build-and-push] Collecting Flask==2.1.2 (from -r requirements.txt (line 6))
+[build : build-and-push]   Downloading Flask-2.1.2-py3-none-any.whl (95 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.2/95.2 kB 127.4 MB/s eta 0:00:00
+[build : build-and-push] Collecting Flask-SQLAlchemy==2.5.1 (from -r requirements.txt (line 7))
+[build : build-and-push]   Downloading Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl (17 kB)
+[build : build-and-push] Collecting psycopg2-binary==2.9.3 (from -r requirements.txt (line 8))
+[build : build-and-push]   Downloading psycopg2_binary-2.9.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 175.9 MB/s eta 0:00:00
+[build : build-and-push] Collecting python-dotenv==0.20.0 (from -r requirements.txt (line 9))
+[build : build-and-push]   Downloading python_dotenv-0.20.0-py3-none-any.whl (17 kB)
+[build : build-and-push] Collecting Flask-Talisman (from -r requirements.txt (line 10))
+[build : build-and-push]   Obtaining dependency information for Flask-Talisman from https://files.pythonhosted.org/packages/77/1c/a15ac936dc3ae4491c5ff089dccdccd72cd3608b15fcf4e2de961f9ee8f3/flask_talisman-1.1.0-py2.py3-none-any.whl.metadata
+[build : build-and-push]   Downloading flask_talisman-1.1.0-py2.py3-none-any.whl.metadata (18 kB)
+[build : build-and-push] Collecting Flask-Cors (from -r requirements.txt (line 11))
+[build : build-and-push]   Obtaining dependency information for Flask-Cors from https://files.pythonhosted.org/packages/10/69/1e6cfb87117568a9de088c32d6258219e9d1ff7c131abf74249ef2031279/Flask_Cors-4.0.0-py2.py3-none-any.whl.metadata
+[build : build-and-push]   Downloading Flask_Cors-4.0.0-py2.py3-none-any.whl.metadata (5.4 kB)
+[build : build-and-push] Collecting gunicorn==20.1.0 (from -r requirements.txt (line 14))
+[build : build-and-push]   Downloading gunicorn-20.1.0-py3-none-any.whl (79 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 209.1 MB/s eta 0:00:00
+[build : build-and-push] Collecting honcho==1.1.0 (from -r requirements.txt (line 15))
+[build : build-and-push]   Downloading honcho-1.1.0-py2.py3-none-any.whl (21 kB)
+[build : build-and-push] Collecting pylint==2.14.0 (from -r requirements.txt (line 18))
+[build : build-and-push]   Downloading pylint-2.14.0-py3-none-any.whl (485 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 485.0/485.0 kB 189.7 MB/s eta 0:00:00
+[build : build-and-push] Collecting flake8==4.0.1 (from -r requirements.txt (line 19))
+[build : build-and-push]   Downloading flake8-4.0.1-py2.py3-none-any.whl (64 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.1/64.1 kB 169.2 MB/s eta 0:00:00
+[build : build-and-push] Collecting black==22.3.0 (from -r requirements.txt (line 20))
+[build : build-and-push]   Downloading black-22.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.5 MB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 26.8 MB/s eta 0:00:00
+[build : build-and-push] Collecting nose==1.3.7 (from -r requirements.txt (line 23))
+[build : build-and-push]   Downloading nose-1.3.7-py3-none-any.whl (154 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 154.7/154.7 kB 162.3 MB/s eta 0:00:00
+[build : build-and-push] Collecting pinocchio==0.4.3 (from -r requirements.txt (line 24))
+[build : build-and-push]   Downloading pinocchio-0.4.3-py3-none-any.whl (12 kB)
+[build : build-and-push] Collecting factory-boy==2.12.0 (from -r requirements.txt (line 25))
+[build : build-and-push]   Downloading factory_boy-2.12.0-py2.py3-none-any.whl (36 kB)
+[build : build-and-push] Collecting coverage==6.3.2 (from -r requirements.txt (line 28))
+[build : build-and-push]   Downloading coverage-6.3.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (210 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 210.7/210.7 kB 204.4 MB/s eta 0:00:00
+[build : build-and-push] Collecting httpie==3.2.1 (from -r requirements.txt (line 31))
+[build : build-and-push]   Downloading httpie-3.2.1-py3-none-any.whl (124 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.0/125.0 kB 189.4 MB/s eta 0:00:00
+[build : build-and-push] Collecting greenlet!=0.4.17 (from SQLAlchemy==1.4.46->-r requirements.txt (line 3))
+[build : build-and-push]   Downloading greenlet-2.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (610 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 610.9/610.9 kB 151.2 MB/s eta 0:00:00
+[build : build-and-push] Collecting Jinja2>=3.0 (from Flask==2.1.2->-r requirements.txt (line 6))
+[build : build-and-push]   Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.1/133.1 kB 2.6 MB/s eta 0:00:00
+[build : build-and-push] Collecting itsdangerous>=2.0 (from Flask==2.1.2->-r requirements.txt (line 6))
+[build : build-and-push]   Downloading itsdangerous-2.1.2-py3-none-any.whl (15 kB)
+[build : build-and-push] Collecting click>=8.0 (from Flask==2.1.2->-r requirements.txt (line 6))
+[build : build-and-push]   Obtaining dependency information for click>=8.0 from https://files.pythonhosted.org/packages/00/2e/d53fa4befbf2cfa713304affc7ca780ce4fc1fd8710527771b58311a3229/click-8.1.7-py3-none-any.whl.metadata
+[build : build-and-push]   Downloading click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+[build : build-and-push] Collecting importlib-metadata>=3.6.0 (from Flask==2.1.2->-r requirements.txt (line 6))
+[build : build-and-push]   Obtaining dependency information for importlib-metadata>=3.6.0 from https://files.pythonhosted.org/packages/cc/37/db7ba97e676af155f5fcb1a35466f446eadc9104e25b83366e8088c9c926/importlib_metadata-6.8.0-py3-none-any.whl.metadata
+[build : build-and-push]   Downloading importlib_metadata-6.8.0-py3-none-any.whl.metadata (5.1 kB)
+[build : build-and-push] Requirement already satisfied: setuptools>=3.0 in /usr/local/lib/python3.9/site-packages (from gunicorn==20.1.0->-r requirements.txt (line 14)) (58.1.0)
+[build : build-and-push] Collecting dill>=0.2 (from pylint==2.14.0->-r requirements.txt (line 18))
+[build : build-and-push]   Obtaining dependency information for dill>=0.2 from https://files.pythonhosted.org/packages/f5/3a/74a29b11cf2cdfcd6ba89c0cecd70b37cd1ba7b77978ce611eb7a146a832/dill-0.3.7-py3-none-any.whl.metadata
+[build : build-and-push]   Downloading dill-0.3.7-py3-none-any.whl.metadata (9.9 kB)
+[build : build-and-push] Collecting platformdirs>=2.2.0 (from pylint==2.14.0->-r requirements.txt (line 18))
+[build : build-and-push]   Obtaining dependency information for platformdirs>=2.2.0 from https://files.pythonhosted.org/packages/14/51/fe5a0d6ea589f0d4a1b97824fb518962ad48b27cd346dcdfa2405187997a/platformdirs-3.10.0-py3-none-any.whl.metadata
+[build : build-and-push]   Downloading platformdirs-3.10.0-py3-none-any.whl.metadata (11 kB)
+[build : build-and-push] Collecting astroid<=2.12.0-dev0,>=2.11.5 (from pylint==2.14.0->-r requirements.txt (line 18))
+[build : build-and-push]   Downloading astroid-2.11.7-py3-none-any.whl (251 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 251.2/251.2 kB 187.0 MB/s eta 0:00:00
+[build : build-and-push] Collecting isort<6,>=4.2.5 (from pylint==2.14.0->-r requirements.txt (line 18))
+[build : build-and-push]   Downloading isort-5.12.0-py3-none-any.whl (91 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 193.8 MB/s eta 0:00:00
+[build : build-and-push] Collecting mccabe<0.8,>=0.6 (from pylint==2.14.0->-r requirements.txt (line 18))
+[build : build-and-push]   Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+[build : build-and-push] Collecting tomlkit>=0.10.1 (from pylint==2.14.0->-r requirements.txt (line 18))
+[build : build-and-push]   Obtaining dependency information for tomlkit>=0.10.1 from https://files.pythonhosted.org/packages/a0/6d/808775ed618e51edaa7bbe6759e22e1c7eafe359af6e084700c6d39d3455/tomlkit-0.12.1-py3-none-any.whl.metadata
+[build : build-and-push]   Downloading tomlkit-0.12.1-py3-none-any.whl.metadata (2.7 kB)
+[build : build-and-push] Collecting typing-extensions>=3.10.0 (from pylint==2.14.0->-r requirements.txt (line 18))
+[build : build-and-push]   Obtaining dependency information for typing-extensions>=3.10.0 from https://files.pythonhosted.org/packages/24/21/7d397a4b7934ff4028987914ac1044d3b7d52712f30e2ac7a2ae5bc86dd0/typing_extensions-4.8.0-py3-none-any.whl.metadata
+[build : build-and-push]   Downloading typing_extensions-4.8.0-py3-none-any.whl.metadata (3.0 kB)
+[build : build-and-push] Collecting tomli>=1.1.0 (from pylint==2.14.0->-r requirements.txt (line 18))
+[build : build-and-push]   Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+[build : build-and-push] Collecting mccabe<0.8,>=0.6 (from pylint==2.14.0->-r requirements.txt (line 18))
+[build : build-and-push]   Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+[build : build-and-push] Collecting pycodestyle<2.9.0,>=2.8.0 (from flake8==4.0.1->-r requirements.txt (line 19))
+[build : build-and-push]   Downloading pycodestyle-2.8.0-py2.py3-none-any.whl (42 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.1/42.1 kB 80.7 MB/s eta 0:00:00
+[build : build-and-push] Collecting pyflakes<2.5.0,>=2.4.0 (from flake8==4.0.1->-r requirements.txt (line 19))
+[build : build-and-push]   Downloading pyflakes-2.4.0-py2.py3-none-any.whl (69 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.7/69.7 kB 155.4 MB/s eta 0:00:00
+[build : build-and-push] Collecting pathspec>=0.9.0 (from black==22.3.0->-r requirements.txt (line 20))
+[build : build-and-push]   Obtaining dependency information for pathspec>=0.9.0 from https://files.pythonhosted.org/packages/b4/2a/9b1be29146139ef459188f5e420a66e835dda921208db600b7037093891f/pathspec-0.11.2-py3-none-any.whl.metadata
+[build : build-and-push]   Downloading pathspec-0.11.2-py3-none-any.whl.metadata (19 kB)
+[build : build-and-push] Collecting mypy-extensions>=0.4.3 (from black==22.3.0->-r requirements.txt (line 20))
+[build : build-and-push]   Downloading mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+[build : build-and-push] Collecting colorama (from pinocchio==0.4.3->-r requirements.txt (line 24))
+[build : build-and-push]   Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+[build : build-and-push] Collecting Faker>=0.7.0 (from factory-boy==2.12.0->-r requirements.txt (line 25))
+[build : build-and-push]   Obtaining dependency information for Faker>=0.7.0 from https://files.pythonhosted.org/packages/30/50/cd430ebe6ec486ac5e13c27ae9410a0d0c510b4968a6a7a84878703d48f4/Faker-19.6.2-py3-none-any.whl.metadata
+[build : build-and-push]   Downloading Faker-19.6.2-py3-none-any.whl.metadata (15 kB)
+[build : build-and-push] Requirement already satisfied: pip in /usr/local/lib/python3.9/site-packages (from httpie==3.2.1->-r requirements.txt (line 31)) (23.2.1)
+[build : build-and-push] Collecting charset-normalizer>=2.0.0 (from httpie==3.2.1->-r requirements.txt (line 31))
+[build : build-and-push]   Obtaining dependency information for charset-normalizer>=2.0.0 from https://files.pythonhosted.org/packages/f9/0d/514be8597d7a96243e5467a37d337b9399cec117a513fcf9328405d911c0/charset_normalizer-3.2.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+[build : build-and-push]   Downloading charset_normalizer-3.2.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (31 kB)
+[build : build-and-push] Collecting defusedxml>=0.6.0 (from httpie==3.2.1->-r requirements.txt (line 31))
+[build : build-and-push]   Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+[build : build-and-push] Collecting requests[socks]>=2.22.0 (from httpie==3.2.1->-r requirements.txt (line 31))
+[build : build-and-push]   Obtaining dependency information for requests[socks]>=2.22.0 from https://files.pythonhosted.org/packages/70/8e/0e2d847013cb52cd35b38c009bb167a1a26b2ce6cd6965bf26b47bc0bf44/requests-2.31.0-py3-none-any.whl.metadata
+[build : build-and-push]   Downloading requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+[build : build-and-push] Collecting Pygments>=2.5.2 (from httpie==3.2.1->-r requirements.txt (line 31))
+[build : build-and-push]   Obtaining dependency information for Pygments>=2.5.2 from https://files.pythonhosted.org/packages/43/88/29adf0b44ba6ac85045e63734ae0997d3c58d8b1a91c914d240828d0d73d/Pygments-2.16.1-py3-none-any.whl.metadata
+[build : build-and-push]   Downloading Pygments-2.16.1-py3-none-any.whl.metadata (2.5 kB)
+[build : build-and-push] Collecting requests-toolbelt>=0.9.1 (from httpie==3.2.1->-r requirements.txt (line 31))
+[build : build-and-push]   Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.5/54.5 kB 96.1 MB/s eta 0:00:00
+[build : build-and-push] Collecting multidict>=4.7.0 (from httpie==3.2.1->-r requirements.txt (line 31))
+[build : build-and-push]   Downloading multidict-6.0.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (114 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.2/114.2 kB 55.8 MB/s eta 0:00:00
+[build : build-and-push] Collecting rich>=9.10.0 (from httpie==3.2.1->-r requirements.txt (line 31))
+[build : build-and-push]   Obtaining dependency information for rich>=9.10.0 from https://files.pythonhosted.org/packages/c1/d1/23ba6235ed82883bb416f57179d1db2c05f3fb8e5d83c18660f9ab6f09c9/rich-13.5.3-py3-none-any.whl.metadata
+[build : build-and-push]   Downloading rich-13.5.3-py3-none-any.whl.metadata (18 kB)
+[build : build-and-push] Collecting lazy-object-proxy>=1.4.0 (from astroid<=2.12.0-dev0,>=2.11.5->pylint==2.14.0->-r requirements.txt (line 18))
+[build : build-and-push]   Downloading lazy_object_proxy-1.9.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (62 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 114.4 MB/s eta 0:00:00
+[build : build-and-push] Collecting wrapt<2,>=1.11 (from astroid<=2.12.0-dev0,>=2.11.5->pylint==2.14.0->-r requirements.txt (line 18))
+[build : build-and-push]   Downloading wrapt-1.15.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (78 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.3/78.3 kB 55.0 MB/s eta 0:00:00
+[build : build-and-push] Collecting python-dateutil>=2.4 (from Faker>=0.7.0->factory-boy==2.12.0->-r requirements.txt (line 25))
+[build : build-and-push]   Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 kB 126.1 MB/s eta 0:00:00
+[build : build-and-push] Collecting zipp>=0.5 (from importlib-metadata>=3.6.0->Flask==2.1.2->-r requirements.txt (line 6))
+[build : build-and-push]   Obtaining dependency information for zipp>=0.5 from https://files.pythonhosted.org/packages/d9/66/48866fc6b158c81cc2bfecc04c480f105c6040e8b077bc54c634b4a67926/zipp-3.17.0-py3-none-any.whl.metadata
+[build : build-and-push]   Downloading zipp-3.17.0-py3-none-any.whl.metadata (3.7 kB)
+[build : build-and-push] Collecting MarkupSafe>=2.0 (from Jinja2>=3.0->Flask==2.1.2->-r requirements.txt (line 6))
+[build : build-and-push]   Obtaining dependency information for MarkupSafe>=2.0 from https://files.pythonhosted.org/packages/de/63/cb7e71984e9159ec5f45b5e81e896c8bdd0e45fe3fc6ce02ab497f0d790e/MarkupSafe-2.1.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+[build : build-and-push]   Downloading MarkupSafe-2.1.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.0 kB)
+[build : build-and-push] Collecting idna<4,>=2.5 (from requests[socks]>=2.22.0->httpie==3.2.1->-r requirements.txt (line 31))
+[build : build-and-push]   Downloading idna-3.4-py3-none-any.whl (61 kB)
+[build : build-and-push]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.5/61.5 kB 155.1 MB/s eta 0:00:00
+[build : build-and-push] Collecting urllib3<3,>=1.21.1 (from requests[socks]>=2.22.0->httpie==3.2.1->-r requirements.txt (line 31))
+[build : build-and-push]   Obtaining dependency information for urllib3<3,>=1.21.1 from https://files.pythonhosted.org/packages/37/dc/399e63f5d1d96bb643404ee830657f4dfcf8503f5ba8fa3c6d465d0c57fe/urllib3-2.0.5-py3-none-any.whl.metadata
+[build : build-and-push]   Downloading urllib3-2.0.5-py3-none-any.whl.metadata (6.6 kB)
+[build : build-and-push] Collecting certifi>=2017.4.17 (from requests[socks]>=2.22.0->httpie==3.2.1->-r requirements.txt (line 31))
+[build : build-and-push]   Obtaining dependency information for certifi>=2017.4.17 from https://files.pythonhosted.org/packages/4c/dd/2234eab22353ffc7d94e8d13177aaa050113286e93e7b40eae01fbf7c3d9/certifi-2023.7.22-py3-none-any.whl.metadata
+[build : build-and-push]   Downloading certifi-2023.7.22-py3-none-any.whl.metadata (2.2 kB)
+[build : build-and-push] Collecting PySocks!=1.5.7,>=1.5.6 (from requests[socks]>=2.22.0->httpie==3.2.1->-r requirements.txt (line 31))
+[build : build-and-push]   Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+[build : build-and-push] Collecting markdown-it-py>=2.2.0 (from rich>=9.10.0->httpie==3.2.1->-r requirements.txt (line 31))
+[build : build-and-push]   Obtaining dependency information for markdown-it-py>=2.2.0 from https://files.pythonhosted.org/packages/42/d7/1ec15b46af6af88f19b8e5ffea08fa375d433c998b8a7639e76935c14f1f/markdown_it_py-3.0.0-py3-none-any.whl.metadata
+[build : build-and-push]   Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+[build : build-and-push] Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=9.10.0->httpie==3.2.1->-r requirements.txt (line 31))
+[build : build-and-push]   Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+[build : build-and-push] Collecting six>=1.5 (from python-dateutil>=2.4->Faker>=0.7.0->factory-boy==2.12.0->-r requirements.txt (line 25))
+[build : build-and-push]   Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+[build : build-and-push] Downloading flask_talisman-1.1.0-py2.py3-none-any.whl (18 kB)
+[build : build-and-push] Downloading Flask_Cors-4.0.0-py2.py3-none-any.whl (14 kB)
+[build : build-and-push] Downloading charset_normalizer-3.2.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (202 kB)
+[build : build-and-push]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 202.1/202.1 kB 87.2 MB/s eta 0:00:00
+[build : build-and-push] Downloading click-8.1.7-py3-none-any.whl (97 kB)
+[build : build-and-push]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.9/97.9 kB 69.5 MB/s eta 0:00:00
+[build : build-and-push] Downloading dill-0.3.7-py3-none-any.whl (115 kB)
+[build : build-and-push]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.3/115.3 kB 109.1 MB/s eta 0:00:00
+[build : build-and-push] Downloading Faker-19.6.2-py3-none-any.whl (1.7 MB)
+[build : build-and-push]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 34.4 MB/s eta 0:00:00
+[build : build-and-push] Downloading importlib_metadata-6.8.0-py3-none-any.whl (22 kB)
+[build : build-and-push] Downloading pathspec-0.11.2-py3-none-any.whl (29 kB)
+[build : build-and-push] Downloading platformdirs-3.10.0-py3-none-any.whl (17 kB)
+[build : build-and-push] Downloading Pygments-2.16.1-py3-none-any.whl (1.2 MB)
+[build : build-and-push]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 110.7 MB/s eta 0:00:00
+[build : build-and-push] Downloading rich-13.5.3-py3-none-any.whl (239 kB)
+[build : build-and-push]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 239.8/239.8 kB 121.7 MB/s eta 0:00:00
+[build : build-and-push] Downloading tomlkit-0.12.1-py3-none-any.whl (37 kB)
+[build : build-and-push] Downloading typing_extensions-4.8.0-py3-none-any.whl (31 kB)
+[build : build-and-push] Downloading certifi-2023.7.22-py3-none-any.whl (158 kB)
+[build : build-and-push]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 158.3/158.3 kB 88.0 MB/s eta 0:00:00
+[build : build-and-push] Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+[build : build-and-push]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 63.4 MB/s eta 0:00:00
+[build : build-and-push] Downloading MarkupSafe-2.1.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+[build : build-and-push] Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+[build : build-and-push]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 kB 179.3 MB/s eta 0:00:00
+[build : build-and-push] Downloading urllib3-2.0.5-py3-none-any.whl (123 kB)
+[build : build-and-push]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123.8/123.8 kB 94.0 MB/s eta 0:00:00
+[build : build-and-push] Downloading zipp-3.17.0-py3-none-any.whl (7.4 kB)
+[build : build-and-push] Installing collected packages: nose, mccabe, honcho, Flask-Talisman, zipp, wrapt, Werkzeug, urllib3, typing-extensions, tomlkit, tomli, six, python-dotenv, PySocks, Pygments, pyflakes, pycodestyle, psycopg2-binary, platformdirs, pathspec, mypy-extensions, multidict, mdurl, MarkupSafe, lazy-object-proxy, itsdangerous, isort, idna, gunicorn, greenlet, dill, defusedxml, coverage, colorama, click, charset-normalizer, certifi, SQLAlchemy, requests, python-dateutil, pinocchio, markdown-it-py, Jinja2, importlib-metadata, flake8, black, astroid, rich, requests-toolbelt, pylint, Flask, Faker, httpie, Flask-SQLAlchemy, Flask-Cors, factory-boy
+[build : build-and-push] Successfully installed Faker-19.6.2 Flask-2.1.2 Flask-Cors-4.0.0 Flask-SQLAlchemy-2.5.1 Flask-Talisman-1.1.0 Jinja2-3.1.2 MarkupSafe-2.1.3 PySocks-1.7.1 Pygments-2.16.1 SQLAlchemy-1.4.46 Werkzeug-2.1.2 astroid-2.11.7 black-22.3.0 certifi-2023.7.22 charset-normalizer-3.2.0 click-8.1.7 colorama-0.4.6 coverage-6.3.2 defusedxml-0.7.1 dill-0.3.7 factory-boy-2.12.0 flake8-4.0.1 greenlet-2.0.2 gunicorn-20.1.0 honcho-1.1.0 httpie-3.2.1 idna-3.4 importlib-metadata-6.8.0 isort-5.12.0 itsdangerous-2.1.2 lazy-object-proxy-1.9.0 markdown-it-py-3.0.0 mccabe-0.6.1 mdurl-0.1.2 multidict-6.0.4 mypy-extensions-1.0.0 nose-1.3.7 pathspec-0.11.2 pinocchio-0.4.3 platformdirs-3.10.0 psycopg2-binary-2.9.3 pycodestyle-2.8.0 pyflakes-2.4.0 pylint-2.14.0 python-dateutil-2.8.2 python-dotenv-0.20.0 requests-2.31.0 requests-toolbelt-1.0.0 rich-13.5.3 six-1.16.0 tomli-2.0.1 tomlkit-0.12.1 typing-extensions-4.8.0 urllib3-2.0.5 wrapt-1.15.0 zipp-3.17.0
+[build : build-and-push] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[build : build-and-push] STEP 6/10: COPY service/ ./service/
+[build : build-and-push] STEP 7/10: RUN useradd --uid 1000 theia && chown -R theia /app
+[build : build-and-push] STEP 8/10: USER theia
+[build : build-and-push] STEP 9/10: EXPOSE 8080
+[build : build-and-push] STEP 10/10: CMD ["gunicorn", "--bind=0.0.0.0:8080", "--log-level=info", "service:app"]
+[build : build-and-push] COMMIT image-registry.openshift-image-registry.svc:5000/sn-labs-giovannyduin/accounts:1
+[build : build-and-push] --> a125159621d
+[build : build-and-push] Successfully tagged image-registry.openshift-image-registry.svc:5000/sn-labs-giovannyduin/accounts:1
+[build : build-and-push] a125159621d18351fa28eed363a6eccdc0aefbd1def7fa73e398f59e20c68312
+[build : build-and-push] Getting image source signatures
+[build : build-and-push] Copying blob sha256:9f055bc49410e77d137fefbcc34a7626ad027348de3762d97ffac38d9d084e1b
+[build : build-and-push] Copying blob sha256:f19cb1e4112dfab2054964b0d8d611e7c33975f2bf6675384d42d0e56bf80164
+[build : build-and-push] Copying blob sha256:a777cf364c6e980cf46f03c2358e1960ef290c4c4cdccf6e4ca1b9ade962b6d8
+[build : build-and-push] Copying blob sha256:080c09ac7a5357d0122591e46cd1a785cc97acf29ff85845c46221ecf0593a16
+[build : build-and-push] Copying blob sha256:0c587e95d7527d253fe24c85b2247e9011038efd3a53cd6194a96f9223df6453
+[build : build-and-push] Copying blob sha256:d310e774110ab038b30c6a5f7b7f7dd527dbe527854496bd30194b9ee6ea496e
+[build : build-and-push] Copying config sha256:a125159621d18351fa28eed363a6eccdc0aefbd1def7fa73e398f59e20c68312
+[build : build-and-push] Writing manifest to image destination
+[build : build-and-push] Storing signatures
+[build : build-and-push] sha256:a9e19543244d21f3f8a6a99e640266c4aa334a7ab63e60f81dede75a868ee43eimage-registry.openshift-image-registry.svc:5000/sn-labs-giovannyduin/accounts:1
+
+[deploy : oc] Updating manifest...
+[deploy : oc] apiVersion: apps/v1
+[deploy : oc] kind: Deployment
+[deploy : oc] metadata:
+[deploy : oc]   creationTimestamp: null
+[deploy : oc]   labels:
+[deploy : oc]     app: accounts
+[deploy : oc]   name: accounts
+[deploy : oc] spec:
+[deploy : oc]   replicas: 3
+[deploy : oc]   selector:
+[deploy : oc]     matchLabels:
+[deploy : oc]       app: accounts
+[deploy : oc]   strategy: {}
+[deploy : oc]   template:
+[deploy : oc]     metadata:
+[deploy : oc]       creationTimestamp: null
+[deploy : oc]       labels:
+[deploy : oc]         app: accounts
+[deploy : oc]     spec:
+[deploy : oc]       containers:
+[deploy : oc]       - image: image-registry.openshift-image-registry.svc:5000/sn-labs-giovannyduin/accounts:1
+[deploy : oc]         name: accounts
+[deploy : oc]         resources: {}
+[deploy : oc] 
+[deploy : oc]         env:
+[deploy : oc]           - name: DATABASE_HOST
+[deploy : oc]             value: postgresql
+[deploy : oc]           - name: DATABASE_NAME
+[deploy : oc]             valueFrom:
+[deploy : oc]               secretKeyRef:
+[deploy : oc]                 name: postgresql
+[deploy : oc]                 key: database-name
+[deploy : oc]           - name: DATABASE_PASSWORD
+[deploy : oc]             valueFrom:
+[deploy : oc]               secretKeyRef:
+[deploy : oc]                 name: postgresql
+[deploy : oc]                 key: database-password
+[deploy : oc]           - name: DATABASE_USER
+[deploy : oc]             valueFrom:
+[deploy : oc]               secretKeyRef:
+[deploy : oc]                 name: postgresql
+[deploy : oc]                 key: database-user
+[deploy : oc] 
+[deploy : oc] 
+[deploy : oc] 
+[deploy : oc] status: {}
+[deploy : oc] 
+[deploy : oc] Deploying to OpenShift...
+[deploy : oc] deployment.apps/accounts configured
+[deploy : oc] service/accounts configured
+[deploy : oc] NAME                       READY   STATUS    RESTARTS   AGE
+[deploy : oc] accounts-bcfc96dd4-bwp5n   1/1     Running   0          5m11s
+[deploy : oc] accounts-bcfc96dd4-v6w7k   1/1     Running   0          5m11s
+[deploy : oc] accounts-bcfc96dd4-vsjng   1/1     Running   0          5m11s
+
