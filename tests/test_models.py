@@ -58,6 +58,10 @@ class TestAccount(unittest.TestCase):
             date_joined=fake_account.date_joined,
         )
         self.assertIsNotNone(account)
+        self.assertEqual(
+            account.__repr__(),
+            f"<Account {account.name} id=[{account.id}]>"
+        )
         self.assertEqual(account.id, None)
         self.assertEqual(account.name, fake_account.name)
         self.assertEqual(account.email, fake_account.email)
@@ -165,6 +169,7 @@ class TestAccount(unittest.TestCase):
         self.assertEqual(new_account.address, account.address)
         self.assertEqual(new_account.phone_number, account.phone_number)
         self.assertEqual(new_account.date_joined, account.date_joined)
+
 
     def test_deserialize_with_key_error(self):
         """It should not Deserialize an account with a KeyError"""
