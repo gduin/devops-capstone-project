@@ -34,7 +34,7 @@ app.logger.info(
 app.logger.info(70 * "*")
 
 try:
-    models.init_db(app)  # make our database tables
+    models.init_db(app)  # make our database tables 
 except Exception as error:  # pylint: disable=broad-except
     app.logger.critical("%s: Cannot continue", error)
     # gunicorn requires exit code 4 to stop spawning workers when they die

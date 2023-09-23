@@ -99,7 +99,7 @@ class TestAccountService(TestCase):
         )
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
-        # Make sure location header is set
+        # Make sure location header is set 
         location = response.headers.get("Location", None)
         self.assertIsNotNone(location)
 

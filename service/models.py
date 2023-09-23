@@ -94,7 +94,7 @@ class Account(db.Model, PersistentBase):
     phone_number = db.Column(
         db.String(32),
         nullable=True
-    )  # phone number is optional
+    )  # phone number is optional 
     date_joined = db.Column(
         db.Date(),
         nullable=False, default=date.today()
