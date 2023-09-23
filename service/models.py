@@ -99,6 +99,8 @@ class Account(db.Model, PersistentBase):
 
     def serialize(self):
         """Serializes a Account into a dictionary"""
+        if self.date_joined is None:
+            self.date_joined = date.today()
         return {
             "id": self.id,
             "name": self.name,
@@ -121,7 +123,7 @@ class Account(db.Model, PersistentBase):
             self.address = data["address"]
             self.phone_number = data.get("phone_number")
             date_joined = data.get("date_joined")
-            if date_joined:
+            if date_joined is not None:
                 self.date_joined = date.fromisoformat(date_joined)
             else:
                 self.date_joined = date.today()
