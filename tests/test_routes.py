@@ -192,7 +192,7 @@ class TestAccountService(TestCase):
 
     def test_delete_an_account_failed(self):
         """It should DELETE none account """
-        account_id = 0 
+        account_id = 0
         resp = self.client.delete(
             f"{BASE_URL}/{account_id}",  content_type="application/json"
         )
@@ -218,7 +218,8 @@ class TestAccountService(TestCase):
             'X-Frame-Options': 'SAMEORIGIN',
             'X-XSS-Protection': '1; mode=block',
             'X-Content-Type-Options': 'nosniff',
-            'Content-Security-Policy': 'default-src \'self\'; object-src \'none\'',
+            'Content-Security-Policy':
+            'default-src \'self\'; object-src \'none\'',
             'Referrer-Policy': 'strict-origin-when-cross-origin'
         }
         for key, value in headers.items():

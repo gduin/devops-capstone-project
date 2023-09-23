@@ -91,8 +91,14 @@ class Account(db.Model, PersistentBase):
     name = db.Column(db.String(64))
     email = db.Column(db.String(64))
     address = db.Column(db.String(256))
-    phone_number = db.Column(db.String(32), nullable=True)  # phone number is optional
-    date_joined = db.Column(db.Date(), nullable=False, default=date.today())
+    phone_number = db.Column(
+        db.String(32),
+        nullable=True
+    )  # phone number is optional
+    date_joined = db.Column(
+        db.Date(),
+        nullable=False, default=date.today()
+    )
 
     def __repr__(self):
         return f"<Account {self.name} id=[{self.id}]>"
@@ -121,14 +127,18 @@ class Account(db.Model, PersistentBase):
             self.name = data["name"]
             self.email = data["email"]
             self.address = data["address"]
-            self.phone_number = data.get("phone_number")
+            self.phone_number = data.get(
+                "phone_number"
+            )
             date_joined = data.get("date_joined")
             if date_joined is not None:
                 self.date_joined = date.fromisoformat(date_joined)
             else:
                 self.date_joined = date.today()
         except KeyError as error:
-            raise DataValidationError("Invalid Account: missing " + error.args[0]) from error
+            raise DataValidationError(
+                "Invalid Account: missing " + error.args[0]
+                ) from error
         except TypeError as error:
             raise DataValidationError(
                 "Invalid Account: body of request contained "
