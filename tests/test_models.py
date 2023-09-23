@@ -154,8 +154,14 @@ class TestAccount(unittest.TestCase):
         self.assertEqual(serial_account["name"], account.name)
         self.assertEqual(serial_account["email"], account.email)
         self.assertEqual(serial_account["address"], account.address)
-        self.assertEqual(serial_account["phone_number"], account.phone_number)
-        self.assertEqual(serial_account["date_joined"], str(account.date_joined))
+        self.assertEqual(
+            serial_account["phone_number"],
+            account.phone_number
+        )
+        self.assertEqual(
+            serial_account["date_joined"],
+            str(account.date_joined)
+        )
 
     def test_deserialize_an_account(self):
         """It should Deserialize an account"""
@@ -173,7 +179,6 @@ class TestAccount(unittest.TestCase):
         serial_account = account.serialize()
         new_account = Account()
         new_account.deserialize(serial_account)
-
 
     def test_deserialize_with_key_error(self):
         """It should not Deserialize an account with a KeyError"""

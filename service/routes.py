@@ -42,7 +42,8 @@ def index():
 def create_accounts():
     """
     Creates an Account
-    This endpoint will create an Account based the data in the body that is posted
+    This endpoint will create an Account based 
+    the data in the body that is posted
     """
     app.logger.info("Request to create an Account")
     check_content_type("application/json")
@@ -54,7 +55,9 @@ def create_accounts():
     # location_url = url_for("get_accounts", account_id=account.id, _external=True)
     location_url = "/"  # Remove once get_accounts has been implemented
     return make_response(
-        jsonify(message), status.HTTP_201_CREATED, {"Location": location_url}
+        jsonify(message),
+        status.HTTP_201_CREATED,
+        {"Location": location_url}
     )
 
 ######################################################################
@@ -92,7 +95,10 @@ def read_accounts(account_id):
     check_content_type("application/json")
     account = Account.find(account_id)
     if not account:
-        abort(status.HTTP_404_NOT_FOUND, f"Account with id [{account_id}] could not be found.")
+        abort(
+            status.HTTP_404_NOT_FOUND,
+            f"Account with id [{account_id}] could not be found."
+        )
     return make_response(
         account.serialize(), status.HTTP_200_OK
         )
@@ -113,7 +119,10 @@ def update_accounts(account_id):
     check_content_type("application/json")
     account = Account.find(account_id)
     if not account:
-        abort(status.HTTP_404_NOT_FOUND, f"Account with id [{account_id}] could not be found.")
+        abort(
+            status.HTTP_404_NOT_FOUND,
+            f"Account with id [{account_id}] could not be found."
+        )
     account.deserialize(request.get_json())
     account.update()
     return make_response(
@@ -136,7 +145,10 @@ def delete_accounts(account_id):
     check_content_type("application/json")
     account = Account.find(account_id)
     if not account:
-        abort(status.HTTP_404_NOT_FOUND, f"Account with id [{account_id}] could not be found.")
+        abort(
+            status.HTTP_404_NOT_FOUND,
+            f"Account with id [{account_id}] could not be found."
+        )
     account.delete()
     return make_response("", status.HTTP_204_NO_CONTENT)
 
