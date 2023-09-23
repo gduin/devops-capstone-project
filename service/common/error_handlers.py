@@ -8,7 +8,7 @@ from . import status
 
 
 ######################################################################
-# Error Handlers 
+# Error Handlers
 ######################################################################
 @app.errorhandler(DataValidationError)
 def request_validation_error(error):
