@@ -169,6 +169,10 @@ class TestAccount(unittest.TestCase):
         self.assertEqual(new_account.address, account.address)
         self.assertEqual(new_account.phone_number, account.phone_number)
         self.assertEqual(new_account.date_joined, account.date_joined)
+        account.date_joined = None
+        serial_account = account.serialize()
+        new_account = Account()
+        new_account.deserialize(serial_account)
 
 
     def test_deserialize_with_key_error(self):
